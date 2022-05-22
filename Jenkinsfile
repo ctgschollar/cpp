@@ -6,6 +6,9 @@ pipeline {
             steps {
                 sh 'docker build -t cpp:base -f base/Dockerfile .'
             }
+            {
+                sh 'cd googletest/quickstart && make build'
+            }
         }
     }
 }
