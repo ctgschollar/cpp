@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+ base:
+  image: cpp:base
+  build:
+   context: .
+  volumes:
+   - ./:/app
+  command:  ./hello_world.app
