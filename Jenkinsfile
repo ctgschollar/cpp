@@ -1,9 +1,10 @@
 pipeline {
-    agent { docker { image 'python:3.10.1-alpine' } }
+    agent none
     stages {
         stage('build') {
+            agent any
             steps {
-                sh 'python --version'
+                sh 'docker build -t cpp:base -f base/Dockerfile .'
             }
         }
     }
