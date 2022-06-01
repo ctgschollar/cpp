@@ -4,13 +4,11 @@ pipeline {
         stage('build') {
             agent any
             steps {
-                sh 'echo "Hello World"'
-                sh 'echo ${PWD}'
-                sh 'ls'
+                sh 'echo "YOLO"'
                 sh 'docker build -t cpp:base -f base/Dockerfile .'
-                sh 'echo "Hello World"'
-                sh 'echo ${PWD}'
-                sh 'ls'
+            }
+            {
+                sh 'ls /var/jenkins_home/workspace/cpp@2/googletest/quickstart'
                 sh 'cd googletest/quickstart && make build'
             }
         }
