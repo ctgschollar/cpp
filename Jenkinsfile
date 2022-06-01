@@ -11,6 +11,7 @@ pipeline {
             steps {
                 sh 'echo "YOLO"'
                 sh 'ls .'
+                sh 'make build'
             }
         }
     }
