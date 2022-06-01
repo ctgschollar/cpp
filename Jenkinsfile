@@ -14,6 +14,8 @@ pipeline {
                 sh '''cd googletest/quickstart
                       echo ${PWD}
                       ls .
+                      docker run --rm -v ${PWD}:/app cpp:base ls .
+                      docker run --rm -v ${PWD}:/app cpp:base ls /app
                       make build'''
             }
         }
