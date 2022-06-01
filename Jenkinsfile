@@ -5,7 +5,6 @@ pipeline {
             agent {
               docker {
                 image 'cpp:base'
-                #args '-v ${PWD}/:/app'
               }
             }
             steps {
