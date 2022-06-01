@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
             agent any
             steps {
+                sh 'echo "Hello World"'
                 sh 'echo ${PWD}'
                 sh 'ls'
                 sh 'docker build -t cpp:base -f base/Dockerfile .'
