@@ -11,10 +11,10 @@ pipeline {
                 sh 'ls /var/jenkins_home/workspace/cpp@2/googletest/quickstart'
                 sh 'docker run --rm -v ${PWD}:/app cpp:base ls .'
                 sh 'docker run --rm -v ${PWD}:/app cpp:base ls /app'
-                sh 'cd googletest/quickstart'
-                sh 'echo ${PWD}'
-                sh 'ls .'
-                sh 'make build'
+                sh '''cd googletest/quickstart
+                      echo ${PWD}
+                      ls .
+                      make build'''
             }
         }
     }
