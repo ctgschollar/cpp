@@ -11,6 +11,7 @@ pipeline {
                 sh 'echo "YOLO"'
                 sh 'ls .'
                 sh 'cd googletest/quickstart'
+                sh 'ls .'
                 sh 'make build'
             }
         }
