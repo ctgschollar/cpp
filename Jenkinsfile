@@ -5,7 +5,7 @@ pipeline {
             agent {
               docker {
                 image 'cpp:base'
-                args '-v ${PWD}:/app'
+                args '-v ${PWD}/googletest/quickstart:/app'
               }
             }
             steps {
