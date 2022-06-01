@@ -5,14 +5,13 @@ pipeline {
             agent {
               docker {
                 image 'cpp:base'
+                args '-v ${PWD}/googletest/quickstart:/app -w /app'
               }
             }
             steps {
-                sh 'echo "YOLO"'
-                sh 'ls .'
-                sh '''cd googletest/quickstart
-                      ls .
-                      make build'''
+              sh '''
+                    ls .
+                    make build'''
             }
         }
     }
